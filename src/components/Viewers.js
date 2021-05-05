@@ -2,23 +2,38 @@ import React from 'react';
 import styled from 'styled-components';
 
 function Viewers() {
+  const viewers = [
+    {
+      src: 'images/viewers-disney.png',
+      alt: 'Disney Viewer Image',
+    },
+    {
+      src: '/images/viewers-pixar.png',
+      alt: 'Pixar Viewer Image',
+    },
+    {
+      src: '/images/viewers-marvel.png',
+      alt: 'Marvel Viewer Image',
+    },
+    {
+      src: '/images/viewers-starwars.png',
+      alt: 'Star Wars Viewer Image',
+    },
+    {
+      src: '/images/viewers-national.png',
+      alt: 'National Geographic Viewer Image',
+    },
+  ];
+
   return (
     <Container>
-      <Wrap>
-        <img src='/images/viewers-disney.png' />
-      </Wrap>
-      <Wrap>
-        <img src='/images/viewers-pixar.png' />
-      </Wrap>
-      <Wrap>
-        <img src='/images/viewers-marvel.png' />
-      </Wrap>
-      <Wrap>
-        <img src='/images/viewers-starwars.png' />
-      </Wrap>
-      <Wrap>
-        <img src='/images/viewers-national.png' />
-      </Wrap>
+      {viewers.map(viewer => {
+        return (
+          <Wrap>
+            <img src={viewer.src} alt={viewer.alt} />
+          </Wrap>
+        );
+      })}
     </Container>
   );
 }
@@ -50,6 +65,6 @@ const Wrap = styled.div`
     box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
       rgb(0 0 0 / 72%) 0px 30px 22px -10px;
     transform: scale(1.05);
-    border-color: rgba(249, 249, 249, 0.8);
+    border-color: rgba(249, 249, 249, 1);
   }
 `;

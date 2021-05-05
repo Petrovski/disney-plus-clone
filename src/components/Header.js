@@ -2,39 +2,57 @@ import React from 'react';
 import styled from 'styled-components';
 
 function Header() {
+  const navItems = [
+    {
+      name: 'HOME',
+      href: 'www.disneyplus.com',
+      src: '/images/home-icon.svg',
+      alt: 'Home Icon',
+    },
+    {
+      name: 'SEARCH',
+      href: 'www.disneyplus.com',
+      src: '/images/search-icon.svg',
+      alt: 'Search Icon',
+    },
+    {
+      name: 'WATCHLIST',
+      href: 'www.disneyplus.com',
+      src: '/images/watchlist-icon.svg',
+      alt: 'Watchlist Icon',
+    },
+    {
+      name: 'ORIGINALS',
+      href: 'www.disneyplus.com',
+      src: '/images/original-icon.svg',
+      alt: 'Originals Icon',
+    },
+    {
+      name: 'MOVIES',
+      href: 'www.disneyplus.com',
+      src: '/images/movie-icon.svg',
+      alt: 'Movies Icon',
+    },
+    {
+      name: 'SERIES',
+      href: 'www.disneyplus.com',
+      src: '/images/series-icon.svg',
+      alt: 'Series Icon',
+    },
+  ];
+
   return (
     <Nav>
       <Logo src='/images/logo.svg' />
       <NavMenu>
-        <a>
-          <img src='/images/home-icon.svg' />
-          <span>HOME</span>
-        </a>
-
-        <a>
-          <img src='/images/search-icon.svg' />
-          <span>SEARCH</span>
-        </a>
-
-        <a>
-          <img src='/images/watchlist-icon.svg' />
-          <span>WATCHLIST</span>
-        </a>
-
-        <a>
-          <img src='/images/original-icon.svg' />
-          <span>ORIGINALS</span>
-        </a>
-
-        <a>
-          <img src='/images/movie-icon.svg' />
-          <span>MOVIES</span>
-        </a>
-
-        <a>
-          <img src='/images/series-icon.svg' />
-          <span>SERIES</span>
-        </a>
+        {navItems.map(item => {
+          return (
+            <a href={item.href}>
+              <img src={item.src} alt={item.alt} />
+              <span>{item.name}</span>
+            </a>
+          );
+        })}
       </NavMenu>
       <UserImg src='/images/favicon.svg' />
     </Nav>
@@ -62,10 +80,12 @@ const NavMenu = styled.div`
   margin-left: 25px;
 
   a {
+    color: inherit;
     display: flex;
     align-items: center;
     padding: 0 12px;
     cursor: pointer;
+    text-decoration: none;
 
     img {
       height: 24px;

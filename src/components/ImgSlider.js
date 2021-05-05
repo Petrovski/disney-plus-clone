@@ -16,20 +16,34 @@ function ImgSlider() {
     autoplaySpeed: 4000,
   };
 
+  const slides = [
+    {
+      src: '/images/slider-badging.jpg',
+      alt: 'Disney Movie 1',
+    },
+    {
+      src: '/images/slider-badag.jpg',
+      alt: 'Disney Movie 1',
+    },
+    {
+      src: '/images/slider-badging.jpg',
+      alt: 'Disney Movie 1',
+    },
+    {
+      src: '/images/slider-badag.jpg',
+      alt: 'Disney Movie 1',
+    },
+  ];
+
   return (
     <Carousel {...settings}>
-      <Wrap>
-        <img src='/images/slider-badging.jpg' />
-      </Wrap>
-      <Wrap>
-        <img src='/images/slider-badag.jpg' />
-      </Wrap>
-      <Wrap>
-        <img src='/images/slider-badging.jpg' />
-      </Wrap>
-      <Wrap>
-        <img src='/images/slider-badag.jpg' />
-      </Wrap>
+      {slides.map(slide => {
+        return (
+          <Wrap>
+            <img src={slide.src} alt={slide.alt} />
+          </Wrap>
+        );
+      })}
     </Carousel>
   );
 }
