@@ -19,19 +19,19 @@ function ImgSlider() {
   const slides = [
     {
       src: '/images/slider-badging.jpg',
-      alt: 'Disney Movie 1',
+      alt: 'Disney+ Slide 1',
+    },
+    {
+      src: '/images/slider-scale.jpg',
+      alt: 'Disney+ Slide 2',
     },
     {
       src: '/images/slider-badag.jpg',
-      alt: 'Disney Movie 1',
+      alt: 'Disney+ Slide 3',
     },
     {
-      src: '/images/slider-badging.jpg',
-      alt: 'Disney Movie 1',
-    },
-    {
-      src: '/images/slider-badag.jpg',
-      alt: 'Disney Movie 1',
+      src: '/images/slider-scales.jpg',
+      alt: 'Disney+ Slide 4',
     },
   ];
 

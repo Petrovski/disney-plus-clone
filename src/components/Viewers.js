@@ -36,7 +36,7 @@ function Viewers() {
         return (
           <Wrap>
             <img src={viewer.src} alt={viewer.alt} />
-            <video autoPlay={true} loop={true} playsInline={true}>
+            <video autoPlay={true} loop={true} playsInline={true} muted={true}>
               <source src={viewer.video} type='video/mp4' />
             </video>
           </Wrap>
