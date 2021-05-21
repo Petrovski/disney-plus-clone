@@ -7,26 +7,31 @@ function Viewers() {
       src: '/images/viewers-disney.png',
       alt: 'Disney Viewer Image',
       video: '/videos/1564674844-disney.mp4',
+      type: 'video/mp4',
     },
     {
       src: '/images/viewers-pixar.png',
       alt: 'Pixar Viewer Image',
       video: '/videos/1564676714-pixar.mp4',
+      type: 'video/mp4',
     },
     {
       src: '/images/viewers-marvel.png',
       alt: 'Marvel Viewer Image',
       video: '/videos/1564676115-marvel.mp4',
+      type: 'video/mp4',
     },
     {
       src: '/images/viewers-starwars.png',
       alt: 'Star Wars Viewer Image',
       video: '/videos/1608229455-star-wars.mp4',
+      type: 'video/mp4',
     },
     {
       src: '/images/viewers-national.png',
       alt: 'National Geographic Viewer Image',
       video: '/videos/1564676296-national-geographic.mp4',
+      type: 'video/mp4',
     },
   ];
 
@@ -37,7 +42,7 @@ function Viewers() {
           <Wrap>
             <img src={viewer.src} alt={viewer.alt} />
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-              <source src={viewer.video} type='video/mp4' />
+              <source src={viewer.video} type={viewer.type} />
             </video>
           </Wrap>
         );
